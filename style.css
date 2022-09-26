@@ -29,7 +29,7 @@ article {
 .jatekTerulet {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   width: 80%;
   height: 200px;
 }
@@ -37,4 +37,6 @@ article {
   width: 30%;
   height: 30%;
   border: 1px black solid;
+  display: flex;
+  justify-content: center;
 }

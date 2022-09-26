@@ -1,19 +1,17 @@
 class Szimbolum {
   #index;
-  constructor(index, szimbolum, szuloElem) {
-    this.szimbolum = szimbolum;
+  constructor(index, szuloElem) {
     this.#index = index;
-    szuloElem.append(`<div class="szimbolum"></div>`);
+    szuloElem.append(`<div class="szimbolum" id=${this.#index}></div>`);
 
     this.szimbolumElem = szuloElem.children("div:last-child");
     this.szimbolumElem.on("click", () => {
-      this.szimbolumHelyzes();
       this.kattintasTrigger();
     });
   }
 
-  szimbolumHelyzes() {
-    this.szimbolumElem.html = this.szimbolum;
+  szimbolumHelyez(index, szimbolum) {
+    document.getElementById(`${index}`).innerHTML = szimbolum;
   }
 
   kattintasTrigger() {
