@@ -2,6 +2,7 @@ class Szimbolum {
   #index;
   constructor(index, szuloElem) {
     this.#index = index;
+    this.szimbolum = "";
     szuloElem.append(`<div class="szimbolum" id=${this.#index}></div>`);
 
     this.szimbolumElem = szuloElem.children("div:last-child");
@@ -12,6 +13,11 @@ class Szimbolum {
 
   szimbolumHelyez(index, szimbolum) {
     document.getElementById(`${index}`).innerHTML = szimbolum;
+    this.eventLeszedes();
+    this.szimbolum = szimbolum;
+  }
+  eventLeszedes() {
+    this.szimbolumElem.off("click");
   }
 
   kattintasTrigger() {
