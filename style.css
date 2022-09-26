@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+article {
+  max-width: 300px;
+  height: 400px;
+  margin: auto;
+  border: 1px black solid;
+}
+.jatekTer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.jatekTer div {
+  border-radius: 5px;
+  margin: auto;
+}
+.jatekosNevek,
+.kovetkezoJatekos,
+.nyertes {
+  border: 1px black solid;
+  width: 80%;
+  min-height: 20px;
+}
+.jatekTerulet {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 80%;
+  height: 200px;
+}
+.szimbolum {
+  width: 30%;
+  height: 30%;
+  border: 1px black solid;
+}

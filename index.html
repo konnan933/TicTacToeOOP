@@ -5,13 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic-Tac-Toe Dervalics Attila | Ódor Norbert</title>
-    <link rel="stylesheet" href="style.css" />
     <script
-      src="https://code.jquery.com/jquery-3.6.1.min.js"
-      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-      crossorigin="anonymous"
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"
     ></script>
     <script src="script.js" type="module"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <article>
+    <div class="jatekTer">
+      <h1>Tic-Tac-Toe</h1>
+      <div class="jatekosNevek">
+        <div>
+          <label for="xJatekos">X-jatákos:</label>
+          <input type="text" id="xJatekos" name="xJatekos" placeholder="X-játékos neve"></input>
+        </div>
+        <div>
+            <label for="oJatekos">O-jatákos:</label>
+            <input type="text" id="oJatekos" name="oJatekos" placeholder="O-játékos neve"></input></div>
+      </div>
+      <div class="kovetkezoJatekos">
+        <h3 id ="kovetkezoJatekos"></h3>
+    </div>
+      <div class="nyertes">
+        <h3 id ="nyertes"></h3>
+     </div>
+    </div>
+    </article>
+  </body>
 </html>
