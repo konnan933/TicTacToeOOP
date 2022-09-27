@@ -44,37 +44,41 @@ class JatekTerulet {
     } játékos következik`;
   }
   nyertekE() {
-    let belsoIndex = 0;
     let elsoSzimb =
       this.#szimbolumLista[this.#nyeroHelyzetek[this.nyeroIndex][0]].szimbolum;
     let masodikSzimb =
       this.#szimbolumLista[this.#nyeroHelyzetek[this.nyeroIndex][1]].szimbolum;
     let harmadikSzimb =
       this.#szimbolumLista[this.#nyeroHelyzetek[this.nyeroIndex][2]].szimbolum;
-    console.log(elsoSzimb);
-    console.log(masodikSzimb);
-    console.log(harmadikSzimb);
     while (
       this.nyeroIndex < this.#nyeroHelyzetek.length &&
       !(elsoSzimb = masodikSzimb && masodikSzimb == harmadikSzimb)
     ) {
-      console.log(this.nyeroIndex);
+      elsoSzimb =
+        this.#szimbolumLista[this.#nyeroHelyzetek[this.nyeroIndex][0]]
+          .szimbolum;
+      masodikSzimb =
+        this.#szimbolumLista[this.#nyeroHelyzetek[this.nyeroIndex][1]]
+          .szimbolum;
+      harmadikSzimb =
+        this.#szimbolumLista[this.#nyeroHelyzetek[this.nyeroIndex][2]]
+          .szimbolum;
       this.nyeroIndex++;
+      console.log(this.nyeroIndex);
     }
-    belsoIndex++;
     if (this.nyeroIndex < this.#nyeroHelyzetek.length) {
+      console.log("asd");
       this.kiNyert();
     }
-    this.nyeroIndex = belsoIndex;
+    this.nyeroIndex = 0;
   }
   kiNyert() {
     let kiNyert =
-      this.szimbolum == "X"
+      this.szimbolum == "O"
         ? document.getElementById("xJatekos").value
         : document.getElementById("oJatekos").value;
 
     document.getElementById("nyertes").innerHTML = kiNyert;
-    this.nyeroIndex = 0;
   }
 }
 
